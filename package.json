@@ -1,0 +1,48 @@
+{
+  "name": "bifrost-crx",
+  "version": "0.0.0",
+  "type": "module",
+  "private": false,
+  "description": "",
+  "author": "AhMisty",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-s check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "lint": "oxlint . --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "check": "run-s type-check lint format",
+    "git:add": "git add .",
+    "git:commit": "git-cz",
+    "git:push": "git push",
+    "git": "run-s check git:add git:commit git:push"
+  },
+  "dependencies": {
+    "pinia": "latest",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "latest",
+    "@tsconfig/node22": "latest",
+    "@types/chrome": "latest",
+    "@types/node": "latest",
+    "@vitejs/plugin-vue": "latest",
+    "@vitejs/plugin-vue-jsx": "latest",
+    "@vue/tsconfig": "latest",
+    "chrome-types": "latest",
+    "git-cz": "latest",
+    "npm-run-all2": "latest",
+    "oxlint": "latest",
+    "prettier": "next",
+    "typescript": "latest",
+    "unocss": "latest",
+    "vite": "latest",
+    "vite-plugin-virtual-alias": "latest",
+    "vite-plugin-vue-devtools": "latest",
+    "vue-tsc": "latest"
+  }
+}
