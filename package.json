@@ -41,7 +41,6 @@
     "typescript": "latest",
     "unocss": "latest",
     "vite": "latest",
-    "vite-plugin-virtual-alias": "latest",
     "vite-plugin-vue-devtools": "latest",
     "vue-tsc": "latest"
   }

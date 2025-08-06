@@ -5,17 +5,18 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
       component: () => import('../views/options.vue'),
     },
     {
-      path: '/options.html',
-      name: 'options',
+      path: '/index.html',
       component: () => import('../views/options.vue'),
     },
     {
-      path: '/sidepanel.html',
-      name: 'sidepanel',
+      path: '/options',
+      component: () => import('../views/options.vue'),
+    },
+    {
+      path: '/sidepanel',
       component: () => import('../views/sidepanel.vue'),
     },
   ],

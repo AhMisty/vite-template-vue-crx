@@ -6,34 +6,22 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import { crx } from '@crxjs/vite-plugin'
 import manifest from './manifest.config'
 import unocss from 'unocss/vite'
-import { virtual_alias } from 'vite-plugin-virtual-alias'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueJsx(),
-    vueDevTools(),
-    virtual_alias({
-      maps: {
-        'sidepanel.html': './index.html',
-        'options.html': './index.html',
-      },
-    }),
-    crx({ manifest }), 
-    unocss(),
-  ],
+  plugins: [vue(), vueJsx(), vueDevTools(), crx({ manifest }), unocss()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
   build: {
+    emptyOutDir: true,
     outDir: 'out',
     target: 'esnext',
     rollupOptions: {
       output: {
-        chunkFileNames: 'assets/js/[name].[hash].js', 
+        chunkFileNames: 'assets/js/[name].[hash].js',
         assetFileNames: `assets/[ext]/[name].[hash].[ext]`,
       },
     },

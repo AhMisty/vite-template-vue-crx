@@ -17,7 +17,7 @@ export default defineManifest({
     type: 'module',
   },
   options_ui: {
-    page: 'options.html',
+    page: 'index.html',
     open_in_tab: true,
   },
   action: {
@@ -27,9 +27,6 @@ export default defineManifest({
       48: 'favicon.png',
       128: 'favicon.png',
     },
-  },
-  side_panel: {
-    default_path: 'sidepanel.html',
   },
   permissions: ['sidePanel', 'storage', 'cookies', 'declarativeNetRequest'],
   host_permissions: ['<all_urls>'],
