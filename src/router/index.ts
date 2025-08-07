@@ -9,7 +9,7 @@ const router = createRouter({
     },
     {
       path: '/index.html',
-      component: () => import('../views/options.vue'),
+      redirect: '/options',
     },
     {
       path: '/options',

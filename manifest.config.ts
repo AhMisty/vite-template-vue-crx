@@ -13,7 +13,7 @@ export default defineManifest({
     128: 'favicon.png',
   },
   background: {
-    service_worker: 'src/service-worker.ts',
+    service_worker: 'src/service.ts',
     type: 'module',
   },
   options_ui: {

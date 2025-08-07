@@ -28,6 +28,7 @@ export default defineConfig({
   },
   server: {
     port: 3721,
+    strictPort: true,
     cors: {
       origin: [/chrome-extension:\/\//],
     },
